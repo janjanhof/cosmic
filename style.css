@@ -1,0 +1,308 @@
+/* Reset some default styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Basic styles */
+body {
+  font-family: Arial, sans-serif;
+}
+
+/* NOWY NAVBAR */
+/* NOWY NAVBAR */
+
+.navbar {
+  background-color: #5D6AA1;
+  color: white;
+  position: relative;
+}
+
+.navbar .navbar-list {
+  list-style: none;
+  display: flex;
+  justify-content: space-between; /* To push the logo and nav-toggle to opposite sides */
+  align-items: center; /* Vertically center items */
+}
+
+.navbar ul {
+  list-style: none;
+  display: flex;
+}
+
+/*WYROWNANIE ELEMENTOW NAWIGACJI DO PRAWEJ I WERTYKALNIE*/
+.navbar .nav-toggle {
+  display: flex;
+  justify-content: flex-end; /* Align items to the right */
+  align-items: center; /* Vertically center the items */
+}
+
+.navbar .nav-toggle ul {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+/*KONIEC WYROWNANIA ELEMENTOW NAWIGACJI DO PRAWEJ I WERTYKALNIE*/
+
+.navbar a {
+  color: inherit;
+  text-decoration: none;
+  padding: 1em;
+  display: inline-block;
+}
+
+.navbar a:hover {
+  background: #6c78ab;
+}
+
+.navbar .hamburger {
+ position: absolute;
+ top: 0;
+ right: 0;
+ border: unset;
+ background: unset;
+ cursor: pointer;
+ display: none;
+}
+
+.navbar .hamburger svg {
+  stroke: white;
+}
+
+.navbar .hamburger .icon-close {
+  display: none;
+}
+
+.content {
+  display: flex;
+  padding: 20px;
+}
+
+.column {
+  flex: 1;
+  padding: 20px;
+ /* border: 1px solid #ddd;*/
+}
+
+.column-left,
+.column-right {
+  flex: 1;
+  padding: 20px;
+  text-align: center; /* Center text horizontally */
+}
+
+.column-left {
+  margin-right: 20px;
+  color: #fff;
+}
+.column-left {
+  text-align: center; /* Center text horizontally */
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Center vertically */
+  align-items: center; /* Center horizontally */
+}
+
+/* bacgrkound section 1 */
+.content {
+  display: flex;
+  padding: 20px;
+  background-image: url('background_1.png'); /* Replace 'your-image.jpg' with the path to your image */
+  background-size: cover;
+  background-attachment: relative;
+  /* 
+  background-repeat: no-repeat;
+  background-position: center center;
+  */
+}
+
+.column-right {
+  flex: 1;
+  padding: 20px;
+  /*border: 1px solid #ddd;*/
+  max-width: 50%; /* Set maximum width to 50% of its container */
+}
+
+.column-right img {
+  max-width: 100%; /* Ensure the image doesn't exceed its container's width */
+  height: auto; /* Maintain the image's aspect ratio */
+}
+
+/* Section 2 */
+
+.section-2 {
+  background-color: white; /* Set your desired background color */
+  padding: 30px;
+  text-align: center; /* Center text horizontally */
+}
+
+.centered-column {
+  max-width: 800px; /* Adjust the maximum width as needed */
+  margin: 0 auto; /* Center the column horizontally */
+  background-image: url('center-column.png'); /* Replace 'your-background-image.jpg' with the path to your image */
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover; /* Adjust the size property as needed */
+  display: flex;
+  justify-content: space-between; /* Arrange child elements in a row */
+  border-radius: 5%;
+  
+}
+
+.left-half {
+  flex: 1;
+  padding: 20px;
+}
+
+.right-half {
+  flex: 1;
+  padding: 40px;
+  max-width: 50%; /* Set maximum width to 50% of its container */
+}
+
+.section-title {
+  font-size: 24px; /* Adjust the font size as needed */
+  color: #5D6AA1;
+  padding: 15px;
+}
+
+/* Section 3 - Our Services */
+#section-3 {
+  background-color: white; /* Set your desired background color */
+  padding: 30px;
+  text-align: center; /* Center text horizontally */
+}
+
+.service-blocks {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap; /* Allow blocks to wrap to the next row on smaller screens */
+  max-width: 1200px; /* Adjust the maximum width as needed */
+  margin: 0 auto; /* Center the blocks horizontally */
+}
+
+.service-block {
+  flex: 1;
+  padding: 20px;
+  max-width: calc(25% - 20px); /* Adjust the width of each block as needed */
+  background-color: #FFFFFF; /* Set block background color */
+  border-radius: 15px;
+  border: 3px solid lightgray;
+  box-shadow: 8px 8px 8px rgba(0, 0, 0, 0.1); /* Add a subtle box shadow */
+  margin-bottom: 20px;
+  text-align: center; /* Center text horizontally */
+}
+
+.service-image {
+  height: 80px; /* Set the desired height of the image */
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center center;
+  border-radius: 5px 5px 0 0; /* Rounded corners for the top */
+}
+
+.service-block h3 {
+  margin-top: 10px;
+  font-size: 18px; /* Adjust the font size as needed */
+}
+
+.service-block p {
+  margin-top: 10px;
+  font-size: 14px; /* Adjust the font size as needed */
+  color: #777777;
+}
+
+.section-3 .section-title {
+  padding-bottom: 30px;
+}
+
+
+
+
+
+/* Media queries for responsiveness */
+@media screen and (max-width: 768px) {
+
+  /* NOWY NAVBAR */
+
+.navbar.open ul {
+  display: block;
+}  
+
+.navbar.open .nav-toggle {
+  display: block;
+}
+
+.navbar.open a {
+  display: block;
+}
+
+.navbar .nav-toggle {
+  display: none;
+}
+
+.navbar .hamburger {
+  display: block;
+}
+
+.navbar.open .hamburger .icon-open {
+  display: none;
+}
+
+.navbar.open .hamburger .icon-close {
+  display: block;
+}
+
+/* KONIEC NOWY NAVBAR */
+
+.content {
+  flex-direction: column-reverse; /* Change the flex direction to stack columns vertically */
+  padding: 20px;
+}
+
+.column {
+  margin-right: 0; /* Remove the right margin to ensure they stack properly */
+}
+
+.column-left,
+.column-right {
+  flex: 1;
+  padding: 20px;
+  max-width: 100%; /* Make both columns take up the full width */
+  text-align: center; /* Center text horizontally */
+  margin-right: 0; /* Remove the right margin to ensure they stack properly */
+}
+
+.column-left {
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Center vertically */
+  align-items: center; /* Center horizontally */
+  color: #fff;
+}
+
+.column-right {
+  margin-top: 20px; /* Add some space between the columns */
+}
+
+/* SEKCJA 2 - O NAS*/
+
+.left-half {
+  display: none;
+}
+
+.right-half {
+  margin: 20px auto; /* Center the right-half div horizontally and add spacing around it */
+  max-width: 100%; /* Make it take up the full width */
+}
+
+.centered-column {
+  background-image: none;
+  background-color: #EAE1DC;
+  border-radius: 5%;
+}
+
+}
+
